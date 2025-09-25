@@ -1,2 +1,36 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE 
+<!DOCTYPE timeTable [
+  <!ELEMENT timeTable (complexes,lessons)>
+  <!ELEMENT complexes (complex) >
+  <!ELEMENT lessons (lesson) >
+  <!ELEMENT complex (name,address) >
+  <!ELEMENT lesson (date,time) >
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT address (#PCDATA)>
+  <!ELEMENT date (#PCDATA)>
+  <!ELEMENT time (#PCDATA)>
+  <!ATTLIST complex id ID #REQUIRED>
+  <!ATTLIST lesson code CDATA #REQUIRED complex IDREF #REQUIRED>
+]>
+<timeTable>
+  <complexes>
+    <complex id="G4239">
+      <name>
+        Home
+      </name>
+      <address>
+        ул.ВДНХ дом Ц1
+      </address>
+    </complex>
+  </complexes>
+  <lessons>
+    <lesson code="25" complex="G4239">
+      <date>
+       2507
+      </date>
+      <time>
+        15:15
+      </time>
+    </lesson>
+  </lessons>
+</timeTable>
